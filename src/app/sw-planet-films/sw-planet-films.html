@@ -1,8 +1,10 @@
 <h3>SW Planets with Film Counts</h3>
 <ul>
     @for (p of planetsToDisplay; track p.name) {
-        <li>
-            {{ p.name }} ({{ p.filmCount }})
+        <li
+            [style.background-color]="p.mostFilms ? 'yellow' : 'inherit'"
+        >
+            {{ p.rank }} {{ p.name }} ({{ p.filmCount }})
         </li>
     }
 </ul>
