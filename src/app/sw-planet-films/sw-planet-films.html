@@ -1,9 +1,8 @@
 <h3>SW Planets with Film Counts</h3>
 <ul>
-    <li>
-        Tatooine (4)
-    </li>
-    <li>
-        Naboo (3)
-    </li>
+    @for (p of planetsToDisplay; track p.name) {
+        <li>
+            {{ p.name }} ({{ p.filmCount }})
+        </li>
+    }
 </ul>

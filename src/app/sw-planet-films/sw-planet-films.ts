@@ -1,5 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { SwPlanetsService } from '../sw-planets.service';
+import { PlanetWithFilmCount } from '../../sw-planet-model';
 
 @Component({
   selector: 'app-sw-planet-films',
@@ -11,4 +12,5 @@ export class SwPlanetFilms {
 
   private planetService = inject(SwPlanetsService);
 
+  protected planetsToDisplay: PlanetWithFilmCount[] = this.planetService.getPlanetFilmDataForDisplay();
 }
