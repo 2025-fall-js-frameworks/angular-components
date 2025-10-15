@@ -11,5 +11,4 @@ export class SwPlanetFilms {
 
   private planetService = inject(SwPlanetsService);
 
-  protected readonly bar = signal(this.planetService.foo())
 }
