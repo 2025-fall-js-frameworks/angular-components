@@ -1158,3 +1158,5 @@ type PlanetForFiltering = {
 	name: string;
 	arrayOfClimates: string[];
 };
+
+const o = { foo: 1, bar: 2 };
