@@ -1,0 +1,21 @@
+# Dependencies
+node_modules
+
+# Build outputs
+dist
+.angular
+
+# Coverage
+coverage
+
+# Environment files
+.env
+.env.local
+
+# IDE
+.vscode
+.idea
+
+# Misc
+*.log
+.DS_Store
