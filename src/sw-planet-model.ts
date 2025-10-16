@@ -1228,26 +1228,24 @@ export type PlanetWithFormattedPopulation = {
 //
 export const getClimates = (
 	ppp: SwapiPlanet[]
-): string[] => ppp
-    .map(
-        x => x.climate
-    )
-    .flatMap(
-        x => x.split(',')
-    )
-    .map(
-        x => x.trim()
-    )
-    // _.uniq() as complex filter...
-    .filter(
-        (x, i, a) => i === a.findIndex(
-            y => y === x
-        )
-    )
-    .toSorted(
-        (a, b) => a.localeCompare(b)
-    )
-;
+): string[] => {
+    const uniqueClimates = new Set<string>();
+    
+    for (let i = 0; i < ppp.length; i++) {
+        const climate = ppp[i].climate;
+        const climateParts = climate.split(',');
+        
+        for (let j = 0; j < climateParts.length; j++) {
+            const trimmedClimate = climateParts[j].trim();
+            uniqueClimates.add(trimmedClimate);
+        }
+    }
+    
+    const result = Array.from(uniqueClimates);
+    result.sort((a, b) => a.localeCompare(b));
+    
+    return result;
+};
 
 export const getPlanetsByClimate = (
 	planets: SwapiPlanet[],
