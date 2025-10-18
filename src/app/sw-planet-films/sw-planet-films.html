@@ -1,10 +1,18 @@
 <h3>SW Planets with Film Counts</h3>
-<ul>
+<div
+    style="display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 16px;"
+>
     @for (p of planetsToDisplay; track p.name) {
-        <li
-            [style.background-color]="p.mostFilms ? 'yellow' : 'inherit'"
+        <mat-card
+            appearance="outlined"
+            style="padding: 10px;"
         >
-            {{ p.rank }} {{ p.name }} ({{ p.filmCount }})
-        </li>
+            <mat-card-title>
+                {{ p.rank }} {{ p.name }}
+            </mat-card-title>
+            <mat-card-content>
+                Films: {{ p.filmCount }}
+            </mat-card-content>
+        </mat-card>
     }
-</ul>
+</div>
