@@ -3,7 +3,6 @@ import { SwPlanetsService } from '../sw-planets.service';
 import { PlanetWithFilmCount } from '../../sw-planet-model';
 import {
   MatCard,
-  MatCardContent,
   MatCardFooter,
   MatCardHeader,
   MatCardSubtitle,
@@ -11,7 +10,6 @@ import {
 } from '@angular/material/card';
 import { MatBadge } from '@angular/material/badge';
 import { MatCheckbox } from '@angular/material/checkbox';
-import { FormsModule } from '@angular/forms';
 import { MatButton } from '@angular/material/button';
 
 type PlanetDisplay = {
@@ -27,13 +25,11 @@ type PlanetDisplay = {
   imports: [
     MatCard,
     MatCardTitle,
-    MatCardContent,
     MatCardHeader,
     MatCardSubtitle,
     MatCardFooter,
     MatBadge,
     MatCheckbox,
-    FormsModule,
     MatButton,
   ],
   templateUrl: './sw-planet-films.html',

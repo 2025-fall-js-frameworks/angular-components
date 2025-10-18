@@ -51,8 +51,8 @@
     </mat-card-header>
     <mat-card-footer>
         <mat-checkbox
-            [ngModel]="p.fave"
-            (ngModelChange)="faveToggled(p)"
+            [checked]="p.fave"
+            (change)="faveToggled(p)"
         >
             Fave
         </mat-checkbox>
