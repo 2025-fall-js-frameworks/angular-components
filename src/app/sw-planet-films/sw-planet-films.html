@@ -4,6 +4,20 @@
 <h5>
     Faves selected: {{ selectedFavesCount() }} / Sum of selected film count: {{ sumOfFilmCounts() }} 
 </h5>
+<div>
+    <button
+        matButton="filled"
+        (click)="faveAll(true)"
+    >
+        All Fave
+    </button>
+    <button
+        matButton="filled"
+        (click)="faveAll(false)"
+    >
+        None Fave
+    </button>
+</div>
 <div
   style="
     padding: 10px;
