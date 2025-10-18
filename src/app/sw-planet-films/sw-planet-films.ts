@@ -1,7 +1,8 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { SwPlanetsService } from '../sw-planets.service';
 import { PlanetWithFilmCount } from '../../sw-planet-model';
-import { MatCard, MatCardContent, MatCardTitle } from '@angular/material/card';
+import { MatCard, MatCardContent, MatCardFooter, MatCardHeader, MatCardSubtitle, MatCardTitle } from '@angular/material/card';
+import { MatBadge } from '@angular/material/badge';
 
 type PlanetDisplay = {
   rank: string;
@@ -12,7 +13,7 @@ type PlanetDisplay = {
 
 @Component({
   selector: 'app-sw-planet-films',
-  imports: [MatCard, MatCardTitle, MatCardContent],
+  imports: [MatCard, MatCardTitle, MatCardContent, MatCardHeader, MatCardSubtitle, MatCardFooter, MatBadge],
   templateUrl: './sw-planet-films.html',
   styleUrl: './sw-planet-films.css'
 })
