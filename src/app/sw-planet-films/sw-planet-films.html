@@ -1,4 +1,9 @@
-<h3>SW Planets with Film Counts</h3>
+<h3>
+    SW Planets with Film Counts
+</h3>
+<h5>
+    Faves selected: {{ selectedFavesCount() }} / Sum of selected film count: {{ sumOfFilmCounts() }} 
+</h5>
 <div
   style="
     padding: 10px;
@@ -7,7 +12,7 @@
     gap: 16px;
   "
 >
-  @for (p of planetsToDisplay; track p.name) {
+  @for (p of planetsToDisplay(); track p.name) {
   <mat-card appearance="outlined">
     <mat-card-header>
       <mat-card-title
@@ -30,12 +35,13 @@
         }
     </mat-card-subtitle>
     </mat-card-header>
-    <mat-card-footer
-        style="text-align: center; color: silver"
-    >
-        <small>
-            &copy; SWAPI : - )
-        </small>
+    <mat-card-footer>
+        <mat-checkbox
+            [ngModel]="p.fave"
+            (ngModelChange)="faveToggled(p)"
+        >
+            Fave
+        </mat-checkbox>
     </mat-card-footer>
   </mat-card>
   }
