@@ -1,1 +1,23 @@
-<p>sw-climates works!</p>
+<h1>Climate Lookup</h1>
+<mat-form-field>
+  <mat-label>Climates</mat-label>
+  <mat-select
+    [value]="selectedClimate()"
+    (selectionChange)="onClimateChange($event.value)"
+  >
+    @for (climate of climates; track climate) {
+    <mat-option 
+        [value]="climate"
+    >
+      {{ climate }}
+    </mat-option>
+    }
+  </mat-select>
+</mat-form-field>
+<ul>
+    @for (p of planetsWithChosenClimate(); track p) {
+        <li>
+            {{ p }}
+        </li>
+    }
+</ul>
