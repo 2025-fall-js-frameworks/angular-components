@@ -1142,13 +1142,23 @@ export const getPlanetsWithFilmCount = (planets: SwapiPlanet[]): PlanetWithFilmC
 		.toSorted((a, b) => a.name.localeCompare(b.name))
 		.toSorted((a, b) => b.filmCount - a.filmCount);
 
-// const getPlanetsWithPopulation = (
-// 	planets: SwapiPlanet[]
-// ): PlanetWithFormattedPopulation[] => planets
-// 	.filter()
-// 	.toSorted()
-// 	.map()
-// ;
+//
+// Show students this solution to Week 07 thought/practice exercise...
+//
+export const getPlanetsWithPopulation = (planets: SwapiPlanet[]): PlanetWithFormattedPopulation[] =>
+	planets
+
+		// Unknown populations ? ? ? Get rid of em : - O
+		.filter((x) => x.population !== 'unknown')
+
+		// Numeric, not alpha, sort ! ! !
+		.toSorted((a, b) => Number(b.population) - Number(a.population))
+
+		// Transform, map, to final "shape"
+		.map((x) => ({
+			name: x.name,
+			formattedPopulation: Number(x.population).toLocaleString(),
+		}));
 
 //
 // Helper, internal stuff...
