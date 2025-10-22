@@ -1289,7 +1289,7 @@ export const getPlanetsByClimate = (
 };
 
 export const getPlanetsWithFilmCount = (
-	planets: SwapiPlanet[]
+	planets: any[]
 ): PlanetWithFilmCount[] => planets
 	.map(
 		x => ({

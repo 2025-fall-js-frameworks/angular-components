@@ -51,25 +51,27 @@ export class SwPlanetFilms implements OnInit {
   );
 
   ngOnInit(): void {
-    const planets = this.planetService.getPlanetFilmDataForDisplay();
+    this.planetService.getAllPlanetsCached().subscribe(cachedPlanets => {
+      const planets = this.planetService.getPlanetFilmDataForDisplay();
 
-    const maxFilms = Math.max(...planets.map((x) => x.filmCount));
+      const maxFilms = Math.max(...planets.map((x) => x.filmCount));
 
-    this.planetsToDisplay.update((prev) =>
-      planets.map((x) => {
-        const firstIndex = planets.findIndex((y) => y.filmCount === x.filmCount);
+      this.planetsToDisplay.update((prev) =>
+        planets.map((x) => {
+          const firstIndex = planets.findIndex((y) => y.filmCount === x.filmCount);
 
-        const lastIndex = planets.findLastIndex((y) => y.filmCount === x.filmCount);
+          const lastIndex = planets.findLastIndex((y) => y.filmCount === x.filmCount);
 
-        return {
-          rank: `${firstIndex === lastIndex ? '' : 'T'}${firstIndex + 1}`,
-          name: x.name,
-          filmCount: x.filmCount,
-          mostFilms: x.filmCount === maxFilms,
-          fave: false,
-        };
-      })
-    );
+          return {
+            rank: `${firstIndex === lastIndex ? '' : 'T'}${firstIndex + 1}`,
+            name: x.name,
+            filmCount: x.filmCount,
+            mostFilms: x.filmCount === maxFilms,
+            fave: false,
+          };
+        })
+      );
+    });
   }
 
   protected faveToggled = (p: PlanetDisplay) => {
