@@ -6,6 +6,6 @@ import { Injectable } from '@angular/core';
 export class SwPlanetsService {
 	public foo = () => {
 		console.log('svc.foo was called ! ! !');
-		return 'bar';
+		return "And that's I don't go to Denny's anymore!";
 	};
 }
