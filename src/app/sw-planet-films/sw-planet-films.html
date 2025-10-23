@@ -1,7 +1,6 @@
-<h1>
-	SW PLANETS WITH FILM COUNTS
-</h1>
+<h1>SW PLANETS WITH FILM COUNTS</h1>
 <ul>
-	<li>Tatooine (5)</li>
-	<li>Alderan (2)</li>
+	@for (planet of planetsToDisplay; track planet) {
+		<li>{{ planet.name }} ({{ planet.filmCount }})</li>
+	}
 </ul>
