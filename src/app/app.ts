@@ -4,7 +4,7 @@ import { SwPlanetFilms } from './sw-planet-films/sw-planet-films';
 
 @Component({
 	selector: 'app-root',
-	imports: [RouterOutlet, SwPlanetFilms],
+	imports: [SwPlanetFilms],
 	templateUrl: './app.html',
 	styleUrl: './app.css',
 })
