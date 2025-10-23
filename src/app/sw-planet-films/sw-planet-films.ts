@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { SwPlanetsService } from '../sw-planets.service';
 
 @Component({
   selector: 'app-sw-planet-films',
@@ -7,5 +8,9 @@ import { Component } from '@angular/core';
   styleUrl: './sw-planet-films.css'
 })
 export class SwPlanetFilms {
+
+  private plantetSvc = inject (SwPlanetsService);
+
+  protected readonly bar = this.plantetSvc.foo();
 
 }
