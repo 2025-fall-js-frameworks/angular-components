@@ -1,5 +1,6 @@
 <h1>Sw Planets with Film Counts</h1>
 <ul>
-	<li>TaTooine (5)</li>
-	<li>Alderan (2)</li>
+	@for (p of planetsToDisplay; track p) {
+		<li>{{ p.name }} ({{ p.filmCount }})</li>
+	}
 </ul>
