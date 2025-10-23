@@ -1,7 +1,8 @@
 <h1>
     SW Planets With Films
 </h1>
-<ul>
-    <li>Tattooine (5)</li>
-    <li>Alderan (2)</li>
-</ul>
+<select id="swPlanetWithFilmsFilter">
+    @for (p of planets; track p) {
+        <option>{{ p.name }} ({{ p.filmCount }})</option>
+    }
+</select>
