@@ -1,11 +1,9 @@
 import { Injectable } from '@angular/core';
+import { allPlanets, getPlanetsWithFilmCount } from '../sw-planet-model';
 
 @Injectable({
-  providedIn: 'root'
+	providedIn: 'root',
 })
 export class SwPlanetsService {
-  public foo = () => {
-    console.log("svc.foo was called ! ! !");
-    return 'bar123';
-  };
+	public getPlanetFilmDataForDisplay = () => getPlanetsWithFilmCount(allPlanets);
 }
