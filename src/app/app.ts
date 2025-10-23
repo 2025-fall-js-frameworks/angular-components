@@ -1,9 +1,10 @@
 import { Component, signal } from '@angular/core';
 import { SwPlanetFilms } from './sw-planet-films/sw-planet-films';
+import { BfunmakerMyComponent } from './bfunmaker-my-component/bfunmaker-my-component';
 
 @Component({
 	selector: 'app-root',
-	imports: [SwPlanetFilms],
+	imports: [SwPlanetFilms, BfunmakerMyComponent],
 	templateUrl: './app.html',
 	styleUrl: './app.css',
 })
