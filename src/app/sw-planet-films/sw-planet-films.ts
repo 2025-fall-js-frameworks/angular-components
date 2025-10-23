@@ -11,5 +11,4 @@ import { SwPlanetsService } from '../sw-planets.service';
 export class SwPlanetFilms {
 	private planetSvc = inject(SwPlanetsService);
 
-	public readonly bar = this.planetSvc.foo();
 }

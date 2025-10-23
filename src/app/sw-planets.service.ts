@@ -4,8 +4,5 @@ import { Injectable } from '@angular/core';
 	providedIn: 'root'
 })
 export class SwPlanetsService {
-	public foo = () => {
-		console.log('bar');
-		return 'bar';
-	}
+
 }
