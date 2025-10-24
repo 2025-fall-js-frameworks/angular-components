@@ -1,4 +1,4 @@
-import { AfterViewInit, Component, inject, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, inject, viewChild, ViewChild } from '@angular/core';
 import { SwPlanetsService } from '../sw-planets.service';
 import { PlanetWithFilmCount } from '../../sw-planet-model';
 import { MatCard, MatCardContent, MatCardHeader, MatCardTitle } from '@angular/material/card';
@@ -28,10 +28,9 @@ export class SwPlanetFilms implements AfterViewInit {
 
 	dataSource = new MatTableDataSource<PlanetWithFilmCount>(this.planetsToDisplay);
 
-	@ViewChild(MatPaginator)
-	paginator: MatPaginator | undefined;
+	private paginator = viewChild(MatPaginator);
 
 	ngAfterViewInit() {
-		this.dataSource.paginator = this.paginator;
+		this.dataSource.paginator = this.paginator();
 	}
 }
