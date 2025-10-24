@@ -1,20 +1,37 @@
-import { Component, inject } from '@angular/core';
+import { AfterViewInit, Component, inject, ViewChild } from '@angular/core';
 import { SwPlanetsService } from '../sw-planets.service';
 import { PlanetWithFilmCount } from '../../sw-planet-model';
 import { MatCard, MatCardContent, MatCardHeader, MatCardTitle } from '@angular/material/card';
-import { MatTableModule } from '@angular/material/table';
+import { MatTableDataSource, MatTableModule } from '@angular/material/table';
+import { MatPaginatorModule, MatPaginator } from '@angular/material/paginator';
 
 @Component({
 	selector: 'app-sw-planet-films',
-	imports: [MatCard, MatCardHeader, MatCardTitle, MatCardContent, MatTableModule],
+	imports: [
+		MatCard,
+		MatCardHeader,
+		MatCardTitle,
+		MatCardContent,
+		MatTableModule,
+		MatPaginatorModule,
+	],
 	templateUrl: './sw-planet-films.html',
 	styleUrl: './sw-planet-films.css',
 })
-export class SwPlanetFilms {
+export class SwPlanetFilms implements AfterViewInit {
 	private planetSvc = inject(SwPlanetsService);
 
 	protected readonly planetsToDisplay: PlanetWithFilmCount[] =
 		this.planetSvc.getPlanetFilmDataForDisplay();
 
 	displayedColumns = ['name', 'filmCount'];
+
+	dataSource = new MatTableDataSource<PlanetWithFilmCount>(this.planetsToDisplay);
+
+	@ViewChild(MatPaginator)
+	paginator: MatPaginator | undefined;
+
+	ngAfterViewInit() {
+		this.dataSource.paginator = this.paginator;
+	}
 }
