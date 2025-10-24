@@ -5,6 +5,8 @@ import { MatCard, MatCardContent, MatCardHeader, MatCardTitle } from '@angular/m
 import { MatTableDataSource, MatTableModule } from '@angular/material/table';
 import { MatPaginatorModule, MatPaginator } from '@angular/material/paginator';
 
+type PlanetForDisplayAndBehavior = PlanetWithFilmCount & { fave: boolean };
+
 @Component({
 	selector: 'app-sw-planet-films',
 	imports: [
@@ -21,10 +23,14 @@ import { MatPaginatorModule, MatPaginator } from '@angular/material/paginator';
 export class SwPlanetFilms implements AfterViewInit {
 	private planetSvc = inject(SwPlanetsService);
 
-	protected readonly planetsToDisplay: PlanetWithFilmCount[] =
-		this.planetSvc.getPlanetFilmDataForDisplay();
+	protected readonly planetsToDisplay: PlanetForDisplayAndBehavior[] = this.planetSvc
+		.getPlanetFilmDataForDisplay()
+		.map((x) => ({
+			...x,
+			fave: false,
+		}));
 
-	displayedColumns = ['name', 'filmCount'];
+	displayedColumns = ['fave', 'name', 'filmCount'];
 
 	dataSource = new MatTableDataSource<PlanetWithFilmCount>(this.planetsToDisplay);
 
