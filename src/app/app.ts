@@ -1,11 +1,12 @@
 import { Component, signal } from '@angular/core';
 import { SwPlanetFilms } from './sw-planet-films/sw-planet-films';
+import { BfunmakerMyComponent } from './bfunmaker-my-component/bfunmaker-my-component';
 import { TsteeleMyComponent } from './tsteele-my-component/tsteele-my-component';
 import { AkoroliovaMyComponent } from './akoroliova-my-component/akoroliova-my-component';
 
 @Component({
 	selector: 'app-root',
-	imports: [SwPlanetFilms, AkoroliovaMyComponent, TsteeleMyComponent],
+	imports: [SwPlanetFilms, AkoroliovaMyComponent, TsteeleMyComponent, BfunmakerMyComponent],
 	templateUrl: './app.html',
 	styleUrl: './app.css',
 
