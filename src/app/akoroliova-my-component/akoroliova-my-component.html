@@ -1,1 +1,45 @@
-<p>akoroliova-my-component works!</p>
+<section>
+	<h2>planet filter</h2>
+
+	<div>
+		<input
+			type="search"
+			placeholder="search by name"
+			[value]="search"
+			(input)="search = $any($event.target).value"
+		/>
+
+		<label>
+			min film count:
+			<input
+				type="number"
+				min="0"
+				[value]="minFilms"
+				(input)="minFilms = +$any($event.target).value"
+			/>
+		</label>
+
+		<label>
+			<input
+				type="checkbox"
+				[checked]="onlyWithResidents"
+				(change)="onlyWithResidents = $any($event.target).checked"
+			/>
+			only with residents
+		</label>
+
+		<button (click)="reset()" [disabled]="!search && !minFilms && !onlyWithResidents">
+			reset
+		</button>
+	</div>
+
+	@if (filtered.length === 0) {
+		<p>no results</p>
+	} @else {
+		<ul>
+			@for (p of filtered; track p.name) {
+				<li>{{ p.name }} ({{ p.filmCount }})</li>
+			}
+		</ul>
+	}
+</section>
