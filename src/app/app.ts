@@ -1,7 +1,7 @@
 import { Component, signal } from '@angular/core';
 import { SwPlanetFilms } from './sw-planet-films/sw-planet-films';
-import { AkoroliovaMyComponent } from './akoroliova-my-component/akoroliova-my-component';
 import { TsteeleMyComponent } from './tsteele-my-component/tsteele-my-component';
+import { AkoroliovaMyComponent } from './akoroliova-my-component/akoroliova-my-component';
 
 @Component({
 	selector: 'app-root',
