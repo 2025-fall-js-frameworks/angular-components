@@ -10,6 +10,7 @@ import { SwPlanetPopulation } from './sw-planet-population/sw-planet-population'
 	selector: 'app-root',
 	imports: [
 		SwPlanetFilms,
+		BfunmakerMyComponent,
 		MyComponent,
 		TsteeleMyComponent,
 		AkoroliovaMyComponent,
