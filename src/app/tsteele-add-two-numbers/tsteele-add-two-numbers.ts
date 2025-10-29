@@ -9,7 +9,7 @@ import { Component, computed, signal } from '@angular/core';
 export class TsteeleAddTwoNumbers {
 	protected readonly numberOne = signal(5);
 	protected readonly numberTwo = signal(5);
-	protected readonly answer = signal(4);
+	protected readonly answer = signal(10);
 
 	protected readonly updateNumberOne = (newValue: number) =>
 		this.numberOne.update((prev) => newValue);
