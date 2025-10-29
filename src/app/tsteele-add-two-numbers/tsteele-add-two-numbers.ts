@@ -11,6 +11,12 @@ export class TsteeleAddTwoNumbers {
 	protected readonly numberTwo = signal(5);
 	protected readonly answer = signal(4);
 
+	protected readonly updateNumberOne = (newValue: number) =>
+		this.numberOne.update((prev) => newValue);
+
+	protected readonly updateNumberTwo = (newValue: number) =>
+		this.numberTwo.update((prev) => newValue);
+
 	protected readonly addTwoNumbers = () => {
 		this.answer.update((prev) => this.numberOne() + this.numberTwo());
 	};
