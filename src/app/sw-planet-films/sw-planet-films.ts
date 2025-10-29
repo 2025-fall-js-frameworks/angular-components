@@ -8,9 +8,4 @@ import { PlanetWithFilmCount } from '../../sw-planet-model';
 	templateUrl: './sw-planet-films.html',
 	styleUrl: './sw-planet-films.css',
 })
-export class SwPlanetFilms {
-	private planetSvc = inject(SwPlanetsService);
-
-	protected readonly planetsToDisplay: PlanetWithFilmCount[] =
-		this.planetSvc.getPlanetFilmDataForDisplay();
-}
+export class SwPlanetFilms {}
