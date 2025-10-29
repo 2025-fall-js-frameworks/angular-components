@@ -1,4 +1,4 @@
-import { Component, signal } from '@angular/core';
+import { Component, computed, signal } from '@angular/core';
 
 @Component({
 	selector: 'app-tsteele-add-two-numbers',
@@ -7,9 +7,11 @@ import { Component, signal } from '@angular/core';
 	styleUrl: './tsteele-add-two-numbers.css',
 })
 export class TsteeleAddTwoNumbers {
+	protected readonly numberOne = signal(5);
+	protected readonly numberTwo = signal(5);
 	protected readonly answer = signal(4);
 
 	protected readonly addTwoNumbers = () => {
-		this.answer.update((prev) => 42);
+		this.answer.update((prev) => this.numberOne() + this.numberTwo());
 	};
 }
