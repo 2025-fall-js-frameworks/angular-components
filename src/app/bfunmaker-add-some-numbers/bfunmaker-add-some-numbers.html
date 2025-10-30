@@ -1,3 +1,13 @@
 <h2>Add some numbers up</h2>
-<input type="number" />&nbsp;+&nbsp; <input type="number" />
-<button type="submit">Calculate</button>
+<input
+	type="number"
+	[value]="firstNumberInput()"
+	(input)="updateFirstInput($event.target.valueAsNumber)"
+/>&nbsp;+&nbsp;
+<input
+	type="number"
+	[value]="secondNumberInput()"
+	(input)="secondNumberInput.set($event.target.valueAsNumber)"
+/>
+<button type="number" (click)="addNumbers()">Calculate</button>
+&nbsp; = &nbsp; {{ answer() }}
