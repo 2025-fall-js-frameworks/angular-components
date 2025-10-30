@@ -7,6 +7,8 @@ import { Yyang22MyComponent } from './yyang22-my-component/yyang22-my-component'
 import { MyComponent } from './kimberg/my-component/my-component';
 import { AkoroliovaMyComponent } from './akoroliova-my-component/akoroliova-my-component';
 import { SwPlanetPopulation } from './sw-planet-population/sw-planet-population';
+import { UgurMyComponent } from './ugur-my-component/ugur-my-component';
+
 
 
 @Component({
@@ -20,6 +22,8 @@ import { SwPlanetPopulation } from './sw-planet-population/sw-planet-population'
 		SwPlanetPopulation,
 		Yyang22MyComponent,
 		MnguyenMyComponent,
+		UgurMyComponent,
+
 	],
 	templateUrl: './app.html',
 	styleUrl: './app.css',
