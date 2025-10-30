@@ -7,7 +7,7 @@ import { Yyang22MyComponent } from './yyang22-my-component/yyang22-my-component'
 import { MyComponent } from './kimberg/my-component/my-component';
 import { AkoroliovaMyComponent } from './akoroliova-my-component/akoroliova-my-component';
 import { SwPlanetPopulation } from './sw-planet-population/sw-planet-population';
-
+import { TsteeleAddTwoNumbers } from './tsteele-add-two-numbers/tsteele-add-two-numbers';
 
 @Component({
 	selector: 'app-root',
@@ -20,6 +20,7 @@ import { SwPlanetPopulation } from './sw-planet-population/sw-planet-population'
 		SwPlanetPopulation,
 		Yyang22MyComponent,
 		MnguyenMyComponent,
+		TsteeleAddTwoNumbers,
 	],
 	templateUrl: './app.html',
 	styleUrl: './app.css',
