@@ -14,6 +14,6 @@ export class AkoroliovaMyComponent02 {
 		this.numberOne.update((prev) => newNumber);
 	protected readonly addNumbers = () => {
 		console.log('user press equal button');
-		this.answer.update((pre) => this.numberOne() + this.numberTwo());
+		this.answer.update((prev) => this.numberOne() + this.numberTwo());
 	};
 }
