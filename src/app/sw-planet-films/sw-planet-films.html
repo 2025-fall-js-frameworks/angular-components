@@ -1,6 +1,4 @@
 <h1>SW Planets with Film Counts</h1>
-<ul>
-	@for (p of planetsToDisplay; track p) {
-		<li>{{ p.name }} ({{ p.filmCount }})</li>
-	}
-</ul>
+@for (p of planetsToDisplay; track p) {
+	<div>{{ p.name }} appears in {{ p.filmCount }} films.</div>
+}

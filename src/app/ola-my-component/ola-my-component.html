@@ -5,8 +5,3 @@
 	<li class="list-group-item">Item</li>
 	<li class="list-group-item disabled">Disabled item</li>
 </ul>
-<ul>
-	@for (p of planetSvc.getPlanetFilmDataForDisplay(); track p) {
-		<li>{{ p.name }} ({{ p.filmCount }})</li>
-	}
-</ul>
