@@ -9,6 +9,7 @@ import { AkoroliovaMyComponent } from './akoroliova-my-component/akoroliova-my-c
 import { SwPlanetPopulation } from './sw-planet-population/sw-planet-population';
 import { CsMyComponent } from './cs-my-component/cs-my-component';
 import { TsteeleAddTwoNumbers } from './tsteele-add-two-numbers/tsteele-add-two-numbers';
+import { Yyang22AddTwoNumbers } from './yyang22-add-two-numbers/yyang22-add-two-numbers';
 
 @Component({
 	selector: 'app-root',
@@ -23,6 +24,7 @@ import { TsteeleAddTwoNumbers } from './tsteele-add-two-numbers/tsteele-add-two-
 		MnguyenMyComponent,
 		CsMyComponent,
 		TsteeleAddTwoNumbers,
+		Yyang22AddTwoNumbers,
 	],
 	templateUrl: './app.html',
 	styleUrl: './app.css',
