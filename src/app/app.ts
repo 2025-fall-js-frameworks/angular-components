@@ -11,6 +11,7 @@ import { SwPlanetPopulation } from './sw-planet-population/sw-planet-population'
 import { CsMyComponent } from './cs-my-component/cs-my-component';
 import { TsteeleAddTwoNumbers } from './tsteele-add-two-numbers/tsteele-add-two-numbers';
 import { OlaMyComponent } from './ola-my-component/ola-my-component';
+import { AkoroliovaMyComponent02 } from './akoroliova-my-component-02/akoroliova-my-component-02';
 
 @Component({
 	selector: 'app-root',
@@ -26,6 +27,7 @@ import { OlaMyComponent } from './ola-my-component/ola-my-component';
 		CsMyComponent,
 		TsteeleAddTwoNumbers,
 		OlaMyComponent,
+    AkoroliovaMyComponent02
 	],
 
 	templateUrl: './app.html',
