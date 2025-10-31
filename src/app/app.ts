@@ -1,5 +1,6 @@
 import { Component, signal } from '@angular/core';
 import { SwPlanetFilms } from './sw-planet-films/sw-planet-films';
+// components
 import { MnguyenMyComponent } from './mnguyen-my-component/mnguyen-my-component';
 import { BfunmakerMyComponent } from './bfunmaker-my-component/bfunmaker-my-component';
 import { TsteeleMyComponent } from './tsteele-my-component/tsteele-my-component';
@@ -9,7 +10,9 @@ import { AkoroliovaMyComponent } from './akoroliova-my-component/akoroliova-my-c
 import { SwPlanetPopulation } from './sw-planet-population/sw-planet-population';
 import { CsMyComponent } from './cs-my-component/cs-my-component';
 import { TsteeleAddTwoNumbers } from './tsteele-add-two-numbers/tsteele-add-two-numbers';
+import { OlaMyComponent } from './ola-my-component/ola-my-component';
 import { AkoroliovaMyComponent02 } from './akoroliova-my-component-02/akoroliova-my-component-02';
+
 @Component({
 	selector: 'app-root',
 	imports: [
@@ -23,7 +26,8 @@ import { AkoroliovaMyComponent02 } from './akoroliova-my-component-02/akoroliova
 		MnguyenMyComponent,
 		CsMyComponent,
 		TsteeleAddTwoNumbers,
-		AkoroliovaMyComponent02
+		OlaMyComponent,
+    AkoroliovaMyComponent02
 	],
 
 	templateUrl: './app.html',
