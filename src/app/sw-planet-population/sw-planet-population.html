@@ -8,8 +8,8 @@
 			@for (p of planetPopulationsToDisplay; track p) {
 				<mat-list-item role="listitem">
 					<span matListItemTitle>{{ p.name }}</span>
-					<span matListItemContent>
-						{{ p.formattedPopulation }}
+					<span matListItemContent>{{ p.formattedPopulation }}</span>
+					<span>
 						@if (p.formattedPopulation == '1') {
 							person
 						} @else {
