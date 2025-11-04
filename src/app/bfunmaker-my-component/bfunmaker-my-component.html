@@ -14,7 +14,7 @@
 				}
 			</mat-select>
 		</mat-form-field>
-		<h2>Planets with {{ selectedClimate() }} climates</h2>
+		<h2>Planets with '{{ selectedClimate() }}' climates:</h2>
 		<ol>
 			@for (p of selectedPlanets(); track p) {
 				<li>{{ p }}</li>
