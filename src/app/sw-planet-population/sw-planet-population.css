@@ -6,3 +6,7 @@
 mat-card-header {
 	text-align: center;
 }
+mat-card-subtitle {
+	text-align: right;
+	padding-right: 30px;
+}
