@@ -1,5 +1,10 @@
 import { Injectable } from '@angular/core';
-import { allPlanets, getPlanetsWithFilmCount, getPlanetsWithPopulation } from '../sw-planet-model';
+import {
+	allPlanets,
+	getPlanetsWithFilmCount,
+	getPlanetsWithPopulation,
+	getClimates,
+} from '../sw-planet-model';
 
 @Injectable({
 	providedIn: 'root',
@@ -10,4 +15,7 @@ export class SwPlanetsService {
 
 	// Planets with population count
 	public getPlanetsPopulationDataForDisplay = () => getPlanetsWithPopulation(allPlanets);
+
+	// Planet Climates
+	public getPlanetClimates = () => getClimates(allPlanets);
 }
