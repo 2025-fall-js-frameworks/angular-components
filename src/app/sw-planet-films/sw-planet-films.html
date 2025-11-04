@@ -7,7 +7,14 @@
 			@for (p of planetsToDisplay; track p) {
 				<mat-list-item>
 					<span matListItemTitle>{{ p.name }}</span>
-					<span matListItemLine>{{ p.filmCount | i18nPlural: filmsMap }}</span>
+					<span matListItemLine>
+						{{ p.filmCount }}
+						@if (p.filmCount !== 1) {
+							films
+						} @else {
+							film
+						}
+					</span>
 				</mat-list-item>
 			}
 		</mat-list>

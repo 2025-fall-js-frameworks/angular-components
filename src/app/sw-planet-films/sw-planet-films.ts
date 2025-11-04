@@ -16,6 +16,4 @@ export class SwPlanetFilms {
 
 	protected readonly planetsToDisplay: PlanetWithFilmCount[] =
 		this.planetSvc.getPlanetFilmDataForDisplay();
-
-	protected readonly filmsMap = { '=1': '# film', other: ' # films' };
 }
