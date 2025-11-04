@@ -1,23 +1,23 @@
-import { Component, inject } from '@angular/core';
+import { Component, computed, inject, signal } from '@angular/core';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { SwPlanetsService } from '../sw-planets.service';
-import { allPlanets } from '../../sw-planet-model';
+import { MatCardModule } from '@angular/material/card';
 
 @Component({
 	selector: 'app-bfunmaker-my-component',
-	imports: [MatFormFieldModule, MatSelectModule],
+	imports: [MatFormFieldModule, MatSelectModule, MatCardModule],
 	templateUrl: './bfunmaker-my-component.html',
 	styleUrl: './bfunmaker-my-component.css',
 })
 export class BfunmakerMyComponent {
-	selectedClimate: string = '';
-
 	private readonly planetSvc = inject(SwPlanetsService);
 	// injject the service so we can get the planet climates
 	protected readonly planetClimates: string[] = this.planetSvc.getPlanetClimates();
 
-	planets = allPlanets;
+	protected readonly selectedClimate = signal('arid');
 
-	protected readonly selectedPlanets = this.planetSvc.getPlanetOfClimates(this.selectedClimate);
+	protected readonly selectedPlanets = computed(() =>
+		this.planetSvc.getPlanetOfClimates(this.selectedClimate()),
+	);
 }
