@@ -1,21 +1,23 @@
 <mat-card class="example-card" appearance="outlined">
 	<mat-card-header>
-		<div mat-card-avatar class="example-header-image"></div>
 		<mat-card-title>SW Planets with Film Counts</mat-card-title>
-		<mat-card-subtitle>Dog Breed</mat-card-subtitle>
 	</mat-card-header>
-	<!-- 
-	<img
-		mat-card-image
-		src="https://material.angular.dev/assets/img/examples/shiba2.jpg"
-		alt="Photo of a Shiba Inu"
-	/>
-	 -->
 	<mat-card-content>
-		<ul>
+		<mat-list>
 			@for (p of planetsToDisplay; track p) {
-				<li>{{ p.name }} ({{ p.filmCount }})</li>
+				<mat-list-item>
+					<span matListItemTitle>{{ p.name }}</span>
+					<span matListItemLine>
+						{{ p.filmCount }}
+						@if (p.filmCount !== 1) {
+							films
+						} @else {
+							film
+						}
+					</span>
+				</mat-list-item>
 			}
-		</ul>
+			<mat-list-item></mat-list-item>
+		</mat-list>
 	</mat-card-content>
 </mat-card>
