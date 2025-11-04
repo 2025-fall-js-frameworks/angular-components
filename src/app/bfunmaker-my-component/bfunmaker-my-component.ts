@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
@@ -18,4 +18,5 @@ export class BfunmakerMyComponent {
 	protected readonly climates = this.planetSvc.getPlanetClimates();
 
 	// Also add a property for the selected climate
+	protected readonly selectedClimate = signal('');
 }

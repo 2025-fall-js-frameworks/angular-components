@@ -6,7 +6,10 @@
 		<br />
 		<mat-form-field>
 			<mat-label>Climate</mat-label>
-			<mat-select>
+			<mat-select
+				[value]="selectedClimate()"
+				(selectionChange)="selectedClimate.set($event.value)"
+			>
 				@for (c of climates; track c) {
 					<mat-option [value]="c">{{ c }}</mat-option>
 				}
