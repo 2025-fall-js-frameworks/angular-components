@@ -1,6 +1,13 @@
-<h1>Distinct "climates" in SW Planet</h1>
-<mat-list role="list">
-	@for (c of planetClimates; track c) {
-		<mat-list-item role="listitem">{{ c }}</mat-list-item>
-	}
-</mat-list>
+<mat-card appearance="outlined">
+	<mat-card-header>
+		<mat-card-title> Distinct "climates" in SW Planet </mat-card-title>
+		<mat-card-subtitle> </mat-card-subtitle>
+	</mat-card-header>
+	<mat-card-content>
+		@for (c of planetClimates; track c) {
+			<li>
+				{{ c }}
+			</li>
+		}
+	</mat-card-content>
+</mat-card>

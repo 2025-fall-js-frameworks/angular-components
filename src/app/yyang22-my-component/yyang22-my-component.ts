@@ -1,10 +1,10 @@
 import { Component, inject } from '@angular/core';
-import { MatListModule } from '@angular/material/list';
 import { SwPlanetsService } from '../sw-planets.service';
+import { MatCardModule } from '@angular/material/card';
 
 @Component({
 	selector: 'app-yyang22-my-component',
-	imports: [MatListModule],
+	imports: [MatCardModule],
 	templateUrl: './yyang22-my-component.html',
 	styleUrl: './yyang22-my-component.css',
 })
