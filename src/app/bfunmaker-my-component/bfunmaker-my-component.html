@@ -1,11 +1,16 @@
 <h1>SW Planets with Distinct Climate</h1>
 <mat-form-field>
 	<mat-label>Select an option</mat-label>
-	<mat-select [(value)]="selected">
+	<mat-select [(value)]="selectedClimate">
 		<mat-option>None</mat-option>
 		@for (climate of planetClimates; track climate) {
 			<mat-option value="{{ climate }}">{{ climate }}</mat-option>
 		}
 	</mat-select>
 </mat-form-field>
-<h2>Planets with {{ selected }} climates</h2>
+<h2>Planets with {{ selectedClimate }} climates</h2>
+<ul>
+	@for (p of selectedPlanets; track p) {
+		<li>{{ p }}</li>
+	}
+</ul>

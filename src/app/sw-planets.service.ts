@@ -4,6 +4,7 @@ import {
 	getPlanetsWithFilmCount,
 	getPlanetsWithPopulation,
 	getClimates,
+	getPlanetsByClimate,
 } from '../sw-planet-model';
 
 @Injectable({
@@ -18,4 +19,7 @@ export class SwPlanetsService {
 
 	// Planet Climates
 	public getPlanetClimates = () => getClimates(allPlanets);
+
+	// Get Planets of climate
+	public getPlanetOfClimates = (climate: string) => getPlanetsByClimate(allPlanets, climate);
 }

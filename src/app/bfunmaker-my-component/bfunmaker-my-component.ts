@@ -11,11 +11,13 @@ import { allPlanets } from '../../sw-planet-model';
 	styleUrl: './bfunmaker-my-component.css',
 })
 export class BfunmakerMyComponent {
-	selected = 'option2';
+	selectedClimate: string = '';
 
 	private readonly planetSvc = inject(SwPlanetsService);
 	// injject the service so we can get the planet climates
 	protected readonly planetClimates: string[] = this.planetSvc.getPlanetClimates();
 
 	planets = allPlanets;
+
+	protected readonly selectedPlanets = this.planetSvc.getPlanetOfClimates(this.selectedClimate);
 }
