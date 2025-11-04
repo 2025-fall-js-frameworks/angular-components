@@ -16,9 +16,9 @@
 			</mat-select>
 		</mat-form-field>
 		<ul>
-			<li>Tatooine</li>
-			<li>etc</li>
-			<li>etc</li>
+			@for (p of planetsForSelectedClimate(); track p) {
+				<li>{{ p }}</li>
+			}
 		</ul>
 	</mat-card-content>
 </mat-card>

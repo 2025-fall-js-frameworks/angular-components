@@ -1,4 +1,4 @@
-import { Component, inject, signal } from '@angular/core';
+import { Component, computed, inject, signal } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
@@ -19,4 +19,9 @@ export class BfunmakerMyComponent {
 
 	// Also add a property for the selected climate
 	protected readonly selectedClimate = signal('');
+
+	// A computed signal for planets to display based on selected climate
+	protected readonly planetsForSelectedClimate = computed(() =>
+		this.planetSvc.getPlanetsForClimate(this.selectedClimate()),
+	);
 }
