@@ -1,11 +1,6 @@
+<h1>Distinct "climates" in SW Planet</h1>
 <mat-list role="list">
-	<mat-list-item role="listitem">Item 1</mat-list-item>
+	@for (c of planetClimates; track c) {
+		<mat-list-item role="listitem">{{ c }}</mat-list-item>
+	}
 </mat-list>
-
-<ul>
-	<li>Arid</li>
-	<li>Windy</li>
-	<li>Cold</li>
-	<li>Warm</li>
-	<li>Hot</li>
-</ul>
