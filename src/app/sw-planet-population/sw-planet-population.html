@@ -1,6 +1,13 @@
-<h1>SW Planets with Population Counts</h1>
-<ul>
-	@for (p of planetPopulationsToDisplay; track p) {
-		<li>{{ p.name }} ({{ p.formattedPopulation }})</li>
-	}
-</ul>
+<mat-card class="populationCard" appearance="outlined">
+	<mat-card-header>
+		<h1>SW Planets with Population Counts</h1>
+	</mat-card-header>
+
+	<mat-card-content>
+		<ul>
+			@for (p of planetPopulationsToDisplay; track p) {
+				<li>{{ p.name }} ({{ p.formattedPopulation }})</li>
+			}
+		</ul>
+	</mat-card-content>
+</mat-card>

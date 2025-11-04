@@ -1,0 +1,8 @@
+.populationCard , mat-card-header {
+	margin: 0 auto;
+	max-width: 500px;
+}
+
+mat-card-header {
+	text-align: center;
+}
