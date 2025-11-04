@@ -1,12 +1,12 @@
 import { Component, signal } from '@angular/core';
 
 @Component({
-	selector: 'app-jgyes-add-two-numbers',
+	selector: 'app-jegyes-add-two-numbers',
 	imports: [],
-	templateUrl: './jgyes-add-two-numbers.html',
-	styleUrl: './jgyes-add-two-numbers.css',
+	templateUrl: './jegyes-add-two-numbers.html',
+	styleUrl: './jegyes-add-two-numbers.css',
 })
-export class JgyesAddTwoNumbers {
+export class jegyesAddTwoNumbers {
 	protected readonly numberOne = signal(2);
 	protected readonly numberTwo = signal(2);
 	protected readonly answer = signal(4);
