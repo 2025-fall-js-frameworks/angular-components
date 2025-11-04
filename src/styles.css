@@ -9,3 +9,8 @@ body {
 	font-family: Roboto, 'Helvetica Neue', sans-serif;
 	padding: 20px;
 }
+
+/* Add spacing below every Material card */
+mat-card {
+	margin-bottom: 40px;
+}
