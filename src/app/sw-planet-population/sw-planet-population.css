@@ -1,0 +1,15 @@
+.populationCard {
+	max-width: 750px;
+}
+
+.cardTitle {
+	text-align: center;
+}
+
+.signature {
+	text-align: end;
+	margin-top: 10px;
+}
+.name {
+	font-weight: bold;
+}
