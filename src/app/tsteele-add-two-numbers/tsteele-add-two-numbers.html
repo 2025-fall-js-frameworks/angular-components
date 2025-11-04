@@ -1,0 +1,7 @@
+<h1>Add Two Numbers</h1>
+<input type="number" [value]="numberOne()" (input)="updateNumberOne($event.target.valueAsNumber)" />
+&nbsp;+&nbsp;
+<input type="number" [value]="numberTwo()" (input)="numberTwo.set($event.target.valueAsNumber)" />
+&nbsp;
+<button (click)="addNumbers()">=</button>
+&nbsp; {{ answer() }}
