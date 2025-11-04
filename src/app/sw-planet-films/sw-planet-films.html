@@ -1,15 +1,12 @@
 <mat-card appearance="outlined">
 	<mat-card-header>
-		<mat-card-title> Australian Shepherd</mat-card-title>
-		<mat-card-subtitle>Herding group</mat-card-subtitle>
+		<mat-card-title>SW Planets with Film Counts</mat-card-title>
 	</mat-card-header>
 	<mat-card-actions>
-		<button matButton>Learn More</button>
+		<ul>
+			@for (p of planetsToDisplay; track p) {
+				<li>{{ p.name }} ({{ p.filmCount }})</li>
+			}
+		</ul>
 	</mat-card-actions>
 </mat-card>
-<h1>SW Planets with Film Counts</h1>
-<ul>
-	@for (p of planetsToDisplay; track p) {
-		<li>{{ p.name }} ({{ p.filmCount }})</li>
-	}
-</ul>
