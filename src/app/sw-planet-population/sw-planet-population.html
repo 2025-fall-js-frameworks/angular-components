@@ -4,10 +4,20 @@
 	</mat-card-header>
 
 	<mat-card-content>
-		<ul>
+		<mat-list>
 			@for (p of planetPopulationsToDisplay; track p) {
-				<li>{{ p.name }} ({{ p.formattedPopulation }})</li>
+				<mat-list-item role="listitem">
+					<span matListItemTitle>{{ p.name }}</span>
+					<span matListItemContent>
+						{{ p.formattedPopulation }}
+						@if (p.formattedPopulation == '1') {
+							person
+						} @else {
+							people
+						}
+					</span>
+				</mat-list-item>
 			}
-		</ul>
+		</mat-list>
 	</mat-card-content>
 </mat-card>
