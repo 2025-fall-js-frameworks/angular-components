@@ -1,5 +1,10 @@
 import { Component, signal } from '@angular/core';
 import { SwPlanetFilms } from './sw-planet-films/sw-planet-films';
+import { jegyesAddTwoNumbers } from './jegyes-add-two-numbers/jegyes-add-two-numbers';
+
+@Component({
+	selector: 'app-root',
+	imports: [SwPlanetFilms, jegyesAddTwoNumbers],
 // components
 import { MnguyenMyComponent } from './mnguyen-my-component/mnguyen-my-component';
 import { BfunmakerMyComponent } from './bfunmaker-my-component/bfunmaker-my-component';
@@ -17,7 +22,6 @@ import { jegyesAddTwoNumbers } from './jegyes-add-two-numbers/jegyes-add-two-num
 	selector: 'app-root',
 	imports: [
 		SwPlanetFilms,
-		jegyesAddTwoNumbers,
 		BfunmakerMyComponent,
 		MyComponent,
 		TsteeleMyComponent,
@@ -27,7 +31,8 @@ import { jegyesAddTwoNumbers } from './jegyes-add-two-numbers/jegyes-add-two-num
 		MnguyenMyComponent,
 		CsMyComponent,
 		TsteeleAddTwoNumbers,
-		OlaMyComponent,
+		OlaMyComponent,		
+		jegyesAddTwoNumbers,
 	],
 
 	templateUrl: './app.html',
