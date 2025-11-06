@@ -26,10 +26,10 @@ import { OlaMyComponent } from './ola-my-component/ola-my-component';
 		SwPlanetPopulation,
 		Yyang22MyComponent,
 		MnguyenMyComponent,
-		UgurMyComponent,
 		CsMyComponent,
 		TsteeleAddTwoNumbers,
 		OlaMyComponent,
+		UgurMyComponent,
 	],
 
 	templateUrl: './app.html',
