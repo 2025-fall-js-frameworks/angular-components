@@ -4,8 +4,8 @@
 	</mat-card-header>
 	<mat-card-content>
 		<ul>
-			@for (climates of planetClimates; track climates) {
-				<li>{{ climates }}</li>
+			@for (c of planetClimates; track c) {
+				<li>{{ c }}</li>
 			}
 		</ul>
 	</mat-card-content>
