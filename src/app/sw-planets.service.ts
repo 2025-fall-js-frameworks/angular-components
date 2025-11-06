@@ -4,7 +4,6 @@ import {
 	getPlanetsWithFilmCount,
 	getPlanetsWithPopulation,
 	getClimates,
-	getPlanetsByClimate,
 } from '../sw-planet-model';
 
 @Injectable({
