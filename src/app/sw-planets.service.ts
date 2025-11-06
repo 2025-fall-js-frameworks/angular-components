@@ -22,4 +22,6 @@ export class SwPlanetsService {
 
 	// Get Planets of climate
 	public getPlanetOfClimates = (climate: string) => getPlanetsByClimate(allPlanets, climate);
+	// Planets
+	public planetNames = allPlanets.map((planet) => planet.name);
 }
