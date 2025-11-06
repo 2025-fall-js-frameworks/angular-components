@@ -1,8 +1,15 @@
-<h1>Distinct "climates" in SW Planets</h1>
-<ul>
-	<li>Arid</li>
-	<li>Windy</li>
-	<li>Cold</li>
-	<li>Warm</li>
-	<li>Hot</li>
-</ul>
+<mat-card appearance="outlined">
+	<mat-card-header>
+		<mat-card-title> Distinct "climates" in SW Planet </mat-card-title>
+		<mat-card-subtitle> </mat-card-subtitle>
+	</mat-card-header>
+	<mat-card-content>
+		<ul>
+			@for (c of planetClimates; track c) {
+				<li>
+					{{ c }}
+				</li>
+			}
+		</ul>
+	</mat-card-content>
+</mat-card>
