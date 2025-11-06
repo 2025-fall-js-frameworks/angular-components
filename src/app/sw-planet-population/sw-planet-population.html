@@ -1,6 +1,24 @@
-<h1>SW Planets with Population Counts</h1>
-<ul>
-	@for (p of planetPopulationsToDisplay; track p) {
-		<li>{{ p.name }} ({{ p.formattedPopulation }})</li>
-	}
-</ul>
+
+<mat-card class="populationCard" appearance="outlined">
+	<mat-card-title class="cardTitle">SW Planets with Population Counts</mat-card-title>
+
+	<mat-list>
+		@for (p of planetPopulationsToDisplay; track p) {
+			<mat-list-item role="listItem">
+				<span matListItemTitle>{{ p.name }}</span>
+				<span matListItemMeta>
+					{{ p.formattedPopulation }}
+					@if (p.formattedPopulation == '1') {
+						person
+					} @else {
+						people
+					}
+				</span>
+			</mat-list-item>
+			<mat-divider></mat-divider>
+		}
+	</mat-list>
+	<mat-card-content class="signature">
+		by <span class="name">Austin Spriggs</span>
+	</mat-card-content>
+</mat-card>
