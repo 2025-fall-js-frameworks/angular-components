@@ -1,8 +1,8 @@
 <section>
-    <h2>My Favorite Star Wars Planets</h2>
-    <ul>
-      <li>Tatooine (desert, 2 suns)</li>
-      <li>Naboo (lakes & meadows)</li>
-      <li>Coruscant (city planet)</li>
-    </ul>
+	<h2>My Favorite Star Wars Planets</h2>
+	<ul>
+		@for (p of planetsToDisplay; track p) {
+			<li>{{ p }}</li>
+		}
+	</ul>
 </section>
