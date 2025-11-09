@@ -12,6 +12,7 @@ import { CsMyComponent } from './cs-my-component/cs-my-component';
 import { TsteeleAddTwoNumbers } from './tsteele-add-two-numbers/tsteele-add-two-numbers';
 import { OlaMyComponent } from './ola-my-component/ola-my-component';
 import { jegyesAddTwoNumbers } from './jegyes-add-two-numbers/jegyes-add-two-numbers';
+import { FsindarMyComponent } from './fsindar-my-component/fsindar-my-component';
 
 @Component({
 	selector: 'app-root',
@@ -29,6 +30,7 @@ import { jegyesAddTwoNumbers } from './jegyes-add-two-numbers/jegyes-add-two-num
 		OlaMyComponent,
 		UgurMyComponent,
 		jegyesAddTwoNumbers,
+		FsindarMyComponent
 	],
 	templateUrl: './app.html',
 	styleUrl: './app.css',
