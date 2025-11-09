@@ -50,7 +50,6 @@
               }
             ],
             "styles": [
-              "src/custom-theme.scss",
               "src/styles.css"
             ]
           },
@@ -116,6 +115,6 @@
     }
   },
   "cli": {
-    "analytics": false
+    "analytics": "6b71ef10-0e07-4fd1-9b60-d8fc714ff0b6"
   }
 }

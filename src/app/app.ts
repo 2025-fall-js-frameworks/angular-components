@@ -1,5 +1,6 @@
 import { Component, signal } from '@angular/core';
 import { SwPlanetFilms } from './sw-planet-films/sw-planet-films';
+<<<<<<< HEAD
 import { MnguyenMyComponent } from './mnguyen-my-component/mnguyen-my-component';
 import { BfunmakerMyComponent } from './bfunmaker-my-component/bfunmaker-my-component';
 import { TsteeleMyComponent } from './tsteele-my-component/tsteele-my-component';
@@ -31,6 +32,13 @@ import { FsindarMyComponent } from './fsindar-my-component/fsindar-my-component'
 		jegyesAddTwoNumbers,
 		FsindarMyComponent,
 	],
+=======
+import { FsindarMyComponent } from './fsindar-my-component/fsindar-my-component';
+
+@Component({
+	selector: 'app-root',
+	imports: [SwPlanetFilms, FsindarMyComponent],
+>>>>>>> 932040019bb637eefcf899f4a586f432c37ef551
 	templateUrl: './app.html',
 	styleUrl: './app.css',
 })

@@ -1,12 +1,10 @@
 import { Component, inject } from '@angular/core';
 import { SwPlanetsService } from '../sw-planets.service';
 import { PlanetWithFilmCount } from '../../sw-planet-model';
-import { MatCardModule } from '@angular/material/card';
-import { MatListModule } from '@angular/material/list';
 
 @Component({
 	selector: 'app-sw-planet-films',
-	imports: [MatCardModule, MatListModule],
+	imports: [],
 	templateUrl: './sw-planet-films.html',
 	styleUrl: './sw-planet-films.css',
 })

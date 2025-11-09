@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <mat-card appearance="outlined">
 	<mat-card-header>
 		<mat-card-title>SW Planets with Film Counts</mat-card-title>
@@ -20,3 +21,11 @@
 		</mat-list>
 	</mat-card-content>
 </mat-card>
+=======
+<h1>SW Planets with Film Counts</h1>
+<ul>
+	@for (p of planetsToDisplay; track p) {
+		<li>{{ p.name }} ({{ p.filmCount }})</li>
+	}
+</ul>
+>>>>>>> 932040019bb637eefcf899f4a586f432c37ef551
