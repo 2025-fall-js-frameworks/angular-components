@@ -1,12 +1,24 @@
-<h1>SW Planets with Distinct Climate</h1>
-<select name="climateDropDown" id="">
-	<option value="arid">Arid</option>
-	<option value="windy">Windy</option>
-	<option value="temperate">Temperate</option>
-	<option value="unkown">Unknown</option>
-</select>
-<ul>
-	<li>Tatooine</li>
-	<li>etc</li>
-	<li>etc</li>
-</ul>
+<mat-card appearance="outlined">
+	<mat-card-header>
+		<mat-card-title> SW Planet with Distinct Climates</mat-card-title>
+	</mat-card-header>
+	<mat-card-content>
+		<mat-form-field>
+			<mat-label>Select an option</mat-label>
+			<mat-select
+				[value]="selectedClimate()"
+				(selectionChange)="selectedClimate.set($event.value)"
+			>
+				@for (climate of planetClimates; track climate) {
+					<mat-option value="{{ climate }}">{{ climate }}</mat-option>
+				}
+			</mat-select>
+		</mat-form-field>
+		<h2>Planets with '{{ selectedClimate() }}' climates:</h2>
+		<ol>
+			@for (p of selectedPlanets(); track p) {
+				<li>{{ p }}</li>
+			}
+		</ol>
+	</mat-card-content>
+</mat-card>
