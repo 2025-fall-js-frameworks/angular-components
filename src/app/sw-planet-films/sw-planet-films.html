@@ -3,10 +3,23 @@
     <mat-card-title>SW Planets with Film Counts</mat-card-title>
   </mat-card-header>
   <mat-card-content>
-    <ul>
-      @for (p of planetsToDisplay; track p) {
-        <li>{{ p.name }} ({{ p.filmCount }})</li>
+	<mat-list>
+		     @for (p of planetsToDisplay; track p) {
+        
+
+ 		<mat-list-item>
+		<span matListItemTitle>{{ p.name }}</span>
+    	<span matListItemLine>
+  		{{ p.filmCount }}
+  		@if (p.filmCount !== 1) {
+    	films
+  		} @else {
+    	film
+  		}
+		</span>
+
+		</mat-list-item>
       }
-    </ul>
+</mat-list>
   </mat-card-content>
 </mat-card>
