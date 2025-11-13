@@ -2,7 +2,6 @@ import { Component, inject } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 import { MatListModule } from '@angular/material/list';
 import { SwPlanetsService } from '../sw-planets.service';
-import { decodedTextSpanIntersectsWith } from 'typescript';
 
 @Component({
 	selector: 'app-fsindar-my-component',
@@ -23,7 +22,7 @@ export class FsindarMyComponent {
 				'Swamp planet filled with creatures but no known civilization; Yoda lived there in exile.',
 		},
 		{
-			name: 'Endor1',
+			name: 'Endor',
 			description: 'Forest moon inhabited by Ewoks; no human civilization.',
 		},
 	];
